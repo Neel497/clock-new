@@ -1,33 +1,41 @@
+/* General Styles */
 body {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     background-color: #101820;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
 }
 
+/* Clock Container */
 .clock-container {
     display: flex;
+    flex-wrap: wrap;
     gap: 20px;
     align-items: center;
+    text-align: center;
 }
 
+/* Circle Styling */
 .circle {
     position: relative;
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
 }
 
+/* SVG for circular progress */
 svg {
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     transform: rotate(-90deg);
 }
 
 circle {
     fill: none;
     stroke: #333;
-    stroke-width: 5;
+    stroke-width: 6;
     stroke-dasharray: 283;
     stroke-dashoffset: 283;
     transition: stroke-dashoffset 0.5s linear;
@@ -46,12 +54,13 @@ circle {
     stroke: #00ff00;
 }
 
+/* Digital Time Display */
 .time {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 20px;
+    font-size: 22px;
     font-weight: bold;
     color: white;
 }
@@ -63,8 +72,36 @@ span {
     color: white;
 }
 
+/* AM/PM Display */
 .ampm {
-    font-size: 20px;
+    font-size: 24px;
     color: white;
     margin-left: 10px;
+    font-weight: bold;
+}
+
+/* 📱 Mobile Responsive Design */
+@media (max-width: 600px) {
+    .clock-container {
+        flex-direction: column;
+    }
+
+    .circle {
+        width: 100px;
+        height: 100px;
+    }
+
+    svg {
+        width: 100px;
+        height: 100px;
+    }
+
+    .time {
+        font-size: 18px;
+    }
+
+    .ampm {
+        font-size: 20px;
+        margin-top: 10px;
+    }
 }
