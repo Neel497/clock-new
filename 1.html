@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock with Circular Progress</title>
+    <link rel="stylesheet" href="2.css">
+</head>
+<body>
+    <div class="clock-container">
+        <div class="circle" id="hour">
+            <svg>
+                <circle cx="50" cy="50" r="45"></circle>
+                <circle cx="50" cy="50" r="45" id="hour-progress"></circle>
+            </svg>
+            <div class="time" id="hours">12</div>
+            <span>Hours</span>
+        </div>
+        
+        <div class="circle" id="minute">
+            <svg>
+                <circle cx="50" cy="50" r="45"></circle>
+                <circle cx="50" cy="50" r="45" id="minute-progress"></circle>
+            </svg>
+            <div class="time" id="minutes">00</div>
+            <span>Minutes</span>
+        </div>
+
+        <div class="circle" id="second">
+            <svg>
+                <circle cx="50" cy="50" r="45"></circle>
+                <circle cx="50" cy="50" r="45" id="second-progress"></circle>
+            </svg>
+            <div class="time" id="seconds">00</div>
+            <span>Seconds</span>
+        </div>
+        
+        <div class="ampm" id="ampm">AM</div>
+    </div>
+
+    <script src="3.js"></script>
+</body>
+</html>
